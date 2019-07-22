@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --hot",
-    "build": "webpack"
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --config webpack.dev.js --hot"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sass-loader": "^7.1.0",
