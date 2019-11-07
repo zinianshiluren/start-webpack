@@ -1,0 +1,24 @@
+.first-dialog{
+  width: 805px;
+  height: 535px;
+  background-image: url("../../resource/pic/first/对话.png");
+  margin: calc((100vh)*0.02) calc((100% - 805px)/2);
+}
+
+.first-container{
+  width: 600px;
+  height: 600px;
+  background-image: url("../../resource/pic/first/圆.png");
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  margin: calc((100vh)*0.03) calc((100% - 600px)/2);
+  text-align: center;
+  padding-top: 50px;
+}
+.first-flex{
+  display: flex;
+  div{
+    flex:1;
+    text-align: center;
+  }
+}

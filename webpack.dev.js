@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: './src/index.jsx',
+        index: ['babel-polyfill',path.resolve(__dirname, 'src')+'/index.jsx'],
         // 还可以多个入口，例如再加一个：
         // search: './src/search.js'
     },
@@ -19,7 +19,19 @@ module.exports = {
     ],
     devServer: {
         contentBase: './dist',
-        hot: true
+        hot: true,
+        historyApiFallback: true,
+        inline: true,
+        progress: true,
+        port: 8080,
+        host: '127.0.0.1',
+        proxy: {
+        '/api/*': {
+        target: 'http://localhost:7001',
+        changeOrigin: true,
+        secure: false
+            }
+        }
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -49,7 +61,7 @@ module.exports = {
                         // 将小于8K的图片以base64的形式打包到js文件中
                         options: {
                             limit: 8192,
-                            name:'img/[name].[hash:7].[ext]'
+                            name:'pic/[name].[hash:7].[ext]'
                         },
                     }
                 ]
