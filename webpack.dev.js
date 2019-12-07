@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: ['babel-polyfill',path.resolve(__dirname, 'src')+'/index.jsx'],
+        index: ['babel-polyfill','./src/index.jsx'],
         // 还可以多个入口，例如再加一个：
         // search: './src/search.js'
     },
@@ -23,7 +23,7 @@ module.exports = {
         historyApiFallback: true,
         inline: true,
         progress: true,
-        port: 8080,
+        port: 8081,
         host: '127.0.0.1',
         proxy: {
         '/api/*': {
