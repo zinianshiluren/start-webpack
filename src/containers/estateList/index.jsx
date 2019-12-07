@@ -1,12 +1,31 @@
-import React, {Component} from "react";
+import React, { useEffect, useCallback, useMemo, lazy, Suspense } from "react";
 import { connect } from 'react-redux';
 import { Tooltip,Icon,Button } from 'antd';
 import './index.scss'
 
+import {
+    setDepartStation,
+    setArriveStation,
+    setTrainNumber,
+    setDepartDate,
+    setSearchParsed,
+    prevDate,
+    nextDate,
+    setDepartTimeStr,
+    setArriveTimeStr,
+    setArriveDate,
+    setDurationStr,
+    setTickets,
+    toggleIsScheduleVisible,
+} from './actions';
 
 function App(props) {
     console.log(props)
     const {relateRate=22,buildingCompleteRate=33,roomCompleteRate=33,lockRate=33,usedCount=20,limitCount=1000}= props
+
+    useEffect(() => {
+        console.log('我就执行一次')
+    }, []);
 
     const ExclamationIcon = text => {
         return (
