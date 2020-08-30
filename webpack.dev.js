@@ -6,9 +6,8 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: ['babel-polyfill',path.resolve(__dirname, 'src')+'/index.jsx'],
+        index: ['babel-polyfill',path.resolve(__dirname, 'src')+'/app.jsx'],
         // 还可以多个入口，例如再加一个：
-        // search: './src/search.js'
     },
     plugins: [
         new CleanWebpackPlugin(),
