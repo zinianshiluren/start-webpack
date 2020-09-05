@@ -66,7 +66,7 @@ export default class AbnormalLabel extends React.Component {
 
         return (
             <div className="content">
-                <Title>异常标注</Title>
+                <Title>批量标注</Title>
                 <div className="header">
                     <div className="wrapper-btn">
                         <Button type="primary" onClick={this.abnormalLabel}>不是异常</Button>

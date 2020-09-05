@@ -1,0 +1,25 @@
+.graph-container {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 150px);
+  .graph-single {
+    width: 50%;
+    flex: 1;
+    height: 100%;
+  }
+}
+
+.alg-name-span {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-right: 13px;
+}
+
+.site-description-item-profile-p-label {
+  display: inline-block;
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.85);
+}

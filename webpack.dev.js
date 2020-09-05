@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: '多维时序数据异常标注平台'
         }),
         new webpack.HotModuleReplacementPlugin()
     ],
@@ -22,7 +22,7 @@ module.exports = {
         historyApiFallback: true,
         inline: true,
         progress: true,
-        port: 8080,
+        port: 8888,
         host: '127.0.0.1',
         proxy: {
         '/api/*': {
