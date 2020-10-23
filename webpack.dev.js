@@ -44,21 +44,24 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx|ts|tsx)$/,
-        loaders: "babel-loader",
-        options: {
-          presets: ["@babel/typescript", "@babel/env", "@babel/react"],
-          plugins: [
-            "@babel/plugin-syntax-dynamic-import",
-            "@babel/plugin-proposal-optional-chaining",
-            "@babel/plugin-proposal-nullish-coalescing-operator",
-            ["@babel/plugin-proposal-decorators", { legacy: true }],
-            ["@babel/proposal-class-properties", { loose: true }]
-          ]
-        }
+        use: [{
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/typescript", "@babel/env", "@babel/react"],
+            plugins: [
+              "@babel/plugin-syntax-dynamic-import",
+              "@babel/plugin-proposal-optional-chaining",
+              "@babel/plugin-proposal-nullish-coalescing-operator",
+              ["@babel/plugin-proposal-decorators", { legacy: true }],
+              ["@babel/proposal-class-properties", { loose: true }]
+            ]
+          }
+        }],
       },
       {
         test: /\.css$/,
-        loaders: ["css-loader"]
+        use: [{ loader: "css-loader" }]
+
       },
       {
         test: /\.(scss|sass)$/,
