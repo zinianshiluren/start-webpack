@@ -15,7 +15,7 @@
     "antd": "^4.7.2",
     "axios": "^0.20.0",
     "hox": "^1.1.1",
-    "immer": "^7.0.14",
+    "immer": "^9.0.6",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
